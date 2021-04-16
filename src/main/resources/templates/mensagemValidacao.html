@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+    	xmlns:th="http://thymeleaf.org">
+	  
+<head>
+</head>
+<body>
+	<div th:fragment="alert (type, message)" 
+	     th:assert="${!#strings.isEmpty(type) and !#strings.isEmpty(message)}"      
+   		 th:classappend="'alert-' + ${type}" class="alert alert-dismissable" style="color: red;">
+   <span th:text="${message}"></span><br/>
+</div>
+</body>
+</html>
